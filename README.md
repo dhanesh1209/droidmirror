@@ -14,7 +14,7 @@ Status: early. Verified on one phone (Samsung Galaxy S23+, Android 16) with one 
 |---|---|---|
 | Phone notifications as Mac banners, auto-reconnect, heartbeat | No | Yes |
 | Reply and dismiss from the Mac menu | No | Yes (reply with a test notification; not yet with a chat app) |
-| QR pairing | No | Not yet |
+| QR pairing | No | Yes (re-paired by scanning the QR code, including with the release builds) |
 | Notifications and reply/dismiss as MCP tools | No | Yes |
 | Taps, swipes, text, screenshots, UI tree (MCP server + CLI) | Yes (adb) | Yes |
 | Screen mirroring (scrcpy) | Yes (adb) | Yes (window, touch, keyboard) |
