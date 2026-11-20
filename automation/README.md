@@ -6,14 +6,14 @@ Drive an Android phone for test automation: taps, swipes, long press, scroll, ty
 
 Requires Node 24 or newer and `adb` on your PATH (or set `ADB=/path/to/adb`).
 
-The package ships compiled JavaScript (`npm run build`, run automatically by `npm pack`). It is not published to npm yet; until it is, install from a packed tarball:
+Install from npm:
 
 ```bash
-npm install --ignore-scripts
-npm run build && npm pack          # makes droidmirror-automation-0.1.0.tgz
-npm install ./droidmirror-automation-0.1.0.tgz   # in the project that will use it
+npm install --ignore-scripts droidmirror-automation
 npx droidmirror-auto devices
 ```
+
+The package ships compiled JavaScript (`npm run build`, run automatically by `npm pack` and `npm publish`). To build it yourself from this repository: `npm install --ignore-scripts && npm run build && npm pack`.
 
 Working on this repo itself runs the TypeScript directly (`npm test`, `node src/cli.ts ...`), with no build step.
 

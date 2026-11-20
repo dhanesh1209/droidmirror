@@ -48,15 +48,15 @@ Note the serial: you need it below. If it says `unauthorized`, unlock the phone 
 
 ## 3. Install the tool
 
-DroidMirror automation is not on npm yet. Install it from the release tarball, `droidmirror-automation-<version>.tgz`:
+Install it from npm into a project folder:
 
 ```bash
 mkdir my-phone-tests && cd my-phone-tests
 npm init -y
-npm install --ignore-scripts /path/to/droidmirror-automation-0.1.0.tgz
+npm install --ignore-scripts droidmirror-automation
 ```
 
-(If you built it from the repository instead, run `npm run build && npm pack` inside `automation/` to make that file.)
+(No network? Each [GitHub release](https://github.com/dhanesh1209/droidmirror/releases/latest) also has the same package as a `.tgz` file: `npm install --ignore-scripts /path/to/droidmirror-automation-<version>.tgz`.)
 
 ## 4. Try it from the command line
 
