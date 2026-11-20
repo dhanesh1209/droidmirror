@@ -33,7 +33,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "TODO: set when the repository exists"
+    "url": "git+https://github.com/dhanesh1209/droidmirror.git",
+    "directory": "automation"
   },
   "keywords": [
     "android",
@@ -41,5 +42,9 @@
     "mcp",
     "test-automation",
     "notifications"
-  ]
+  ],
+  "homepage": "https://github.com/dhanesh1209/droidmirror/blob/main/automation/SETUP.md",
+  "bugs": {
+    "url": "https://github.com/dhanesh1209/droidmirror/issues"
+  }
 }
