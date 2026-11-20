@@ -1,0 +1,45 @@
+{
+  "name": "droidmirror-automation",
+  "version": "0.1.0",
+  "description": "Drive an Android phone for test automation: taps, swipes, text, screenshots and the UI tree, as an MCP server and a CLI. Uses adb.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "bin": {
+    "droidmirror-auto": "./dist/cli.js",
+    "droidmirror-mcp": "./dist/mcp.js"
+  },
+  "scripts": {
+    "test": "node --test 'test/*.test.ts'",
+    "build": "rm -rf dist && tsc -p . && chmod +x dist/cli.js dist/mcp.js",
+    "prepack": "npm run build",
+    "mcp": "node src/mcp.ts",
+    "cli": "node src/cli.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.2",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.6",
+    "typescript": "7.0.2"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "TODO: set when the repository exists"
+  },
+  "keywords": [
+    "android",
+    "adb",
+    "mcp",
+    "test-automation",
+    "notifications"
+  ]
+}

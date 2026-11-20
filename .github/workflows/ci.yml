@@ -1,0 +1,37 @@
+# NOTE: written but not yet run on GitHub. Expect to adjust runner images, Swift/Node versions and the
+# Android SDK platform (the app compiles against API 36) after the first run.
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  swift:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: swift test
+
+  automation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm ci --ignore-scripts
+        working-directory: automation
+      - run: npm test
+        working-directory: automation
+
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 17
+      - run: ./gradlew --no-daemon :app:testDebugUnitTest :app:assembleDebug
+        working-directory: android

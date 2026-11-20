@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dm_accent">#8AB4F8</color>
+    <color name="dm_bg">#121212</color>
+    <color name="dm_surface">#1F2123</color>
+    <color name="dm_text">#E8EAED</color>
+    <color name="dm_text_secondary">#9AA0A6</color>
+    <color name="dm_outline">#3C4043</color>
+    <color name="dm_ok">#81C995</color>
+    <color name="dm_attention">#FDD663</color>
+</resources>

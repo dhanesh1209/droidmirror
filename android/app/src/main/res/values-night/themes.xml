@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.DroidMirror" parent="android:Theme.DeviceDefault.NoActionBar">
+        <item name="android:windowBackground">@color/dm_bg</item>
+        <item name="android:statusBarColor">@color/dm_bg</item>
+        <item name="android:navigationBarColor">@color/dm_bg</item>
+    </style>
+</resources>

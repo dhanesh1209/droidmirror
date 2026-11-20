@@ -1,0 +1,23 @@
+# Swift / Xcode
+.build/
+.swiftpm/
+DerivedData/
+*.xcodeproj
+/build/
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+*.apk
+
+# Node
+automation/node_modules/
+
+# Editors and OS
+.idea/
+.DS_Store
+automation/dist/
+automation/*.tgz
+release/
