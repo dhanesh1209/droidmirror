@@ -29,7 +29,7 @@ Pick one way to get the two apps: download them (easiest) or build them from sou
 
 ### Option A: download the release files
 
-From the project's releases page, download `DroidMirror-<version>.pkg` (Mac) and `DroidMirror-<version>.apk` (Android). Check them against `SHA256SUMS`:
+From the [latest release](https://github.com/dhanesh1209/droidmirror/releases/latest), download `DroidMirror-<version>.pkg` (Mac) and `DroidMirror-<version>.apk` (Android). Check them against `SHA256SUMS`:
 
 ```bash
 shasum -a 256 DroidMirror-*.pkg DroidMirror-*.apk
