@@ -8,8 +8,8 @@
     "node": ">=24"
   },
   "bin": {
-    "droidmirror-auto": "./dist/cli.js",
-    "droidmirror-mcp": "./dist/mcp.js"
+    "droidmirror-auto": "dist/cli.js",
+    "droidmirror-mcp": "dist/mcp.js"
   },
   "scripts": {
     "test": "node --test 'test/*.test.ts'",
