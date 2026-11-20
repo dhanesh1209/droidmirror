@@ -1,0 +1,36 @@
+# Publishes the automation tool to GitHub Packages as @dhanesh1209/droidmirror-automation,
+# so it shows in the repo's "Packages" box. The main npm package (droidmirror-automation on npmjs.com)
+# is published by hand and is not touched by this workflow.
+#
+# Runs when a GitHub release is published, or on demand from the Actions tab.
+# Uses the built-in GITHUB_TOKEN: no personal token is needed.
+name: Publish to GitHub Packages
+
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: automation
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          registry-url: https://npm.pkg.github.com
+          scope: "@dhanesh1209"
+      - run: npm ci --ignore-scripts
+      # GitHub Packages needs a scoped name that matches the repository owner.
+      - run: npm pkg set name=@dhanesh1209/droidmirror-automation publishConfig.registry=https://npm.pkg.github.com
+      - run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
