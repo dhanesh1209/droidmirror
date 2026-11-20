@@ -1,5 +1,7 @@
 # DroidMirror
 
+[![npm](https://img.shields.io/npm/v/droidmirror-automation?label=npm%3A%20droidmirror-automation)](https://www.npmjs.com/package/droidmirror-automation) [![CI](https://github.com/dhanesh1209/droidmirror/actions/workflows/ci.yml/badge.svg)](https://github.com/dhanesh1209/droidmirror/actions/workflows/ci.yml) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 Your Android phone's notifications on your Mac, with replies, and a tool for driving the phone from scripts and AI agents. It aims for the feel of iPhone Mirroring on Android.
 
 - **Notifications without USB debugging.** A small Android app sends your phone's notifications to a Mac menu-bar app over your own Wi-Fi, encrypted. You can reply to and dismiss them from the Mac.
@@ -81,6 +83,8 @@ A phone icon appears in the menu bar. For mirroring and automation, also install
 The Mac log is at `~/Library/Logs/DroidMirror/companion.log` (app names and text lengths, never message text).
 
 ## Automation and MCP
+
+Install: `npm install --ignore-scripts droidmirror-automation` ([npm package](https://www.npmjs.com/package/droidmirror-automation)).
 
 **Setup guide: [automation/SETUP.md](automation/SETUP.md).** Reference: [automation/README.md](automation/README.md). Control is off until you pass `--allow-control` and name the phone with `--device <serial>`. Reading notifications and replying are separate opt-ins, and the Mac app has its own switches for both, off by default. Every reply asks for confirmation on the Mac.
 
