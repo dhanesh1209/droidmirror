@@ -1,6 +1,6 @@
 {
   "name": "droidmirror-automation",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Drive an Android phone for test automation: taps, swipes, text, screenshots and the UI tree, as an MCP server and a CLI. Uses adb.",
   "type": "module",
   "license": "MIT",
