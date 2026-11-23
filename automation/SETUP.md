@@ -121,7 +121,6 @@ The screen stays dark while your command runs and is restored when it ends. Over
 
 Important:
 - The phone must already be **unlocked**, and it **stays unlocked and awake** while dark. Do not leave it unattended in a public place.
-- This was checked on one phone (Samsung SM-S916B, Android 16). Other phones are untested.
 
 ## 7. Optional: notification tools
 
@@ -172,4 +171,3 @@ Tools you get: `notification_status`, `list_notifications`, `wait_for_notificati
 - Each tap or key costs about 70 ms and a screenshot about 280 ms over USB. Fine for test steps, not for fast continuous drags.
 - No multi-touch (pinch, rotate) yet.
 - Wi-Fi debugging (instead of USB) is untested and will be slower.
-- Tested on one phone (Samsung SM-S916B, Android 16) over USB.

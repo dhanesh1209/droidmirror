@@ -8,7 +8,7 @@ Your Android phone's notifications on your Mac, with replies, and a tool for dri
 - **Automation for testing.** An MCP server and a CLI (`automation/`) tap, swipe, type, screenshot and read the screen through adb, so an AI agent or a test script can drive a phone.
 - **Screen mirroring** is a thin wrapper around [scrcpy](https://github.com/Genymobile/scrcpy). It needs USB or Wireless debugging.
 
-Status: early. Verified on one phone (Samsung Galaxy S23+, Android 16) with one Mac. Expect rough edges.
+Status: early. Expect rough edges.
 
 ## What works
 

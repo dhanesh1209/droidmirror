@@ -68,12 +68,11 @@ Over MCP it is the `screen_dark` tool (`enabled: true` or `false`). It needs `--
 
 How it works and what to know:
 
-- It runs scrcpy with no window and no audio, and scrcpy powers the display off at its own layer. `adb shell cmd display power-off` does not work for this: in a test on a Samsung SM-S916B (Android 16) taps were ignored and screenshots were black.
+- It runs scrcpy with no window and no audio, and scrcpy powers the display off at its own layer. `adb shell cmd display power-off` does not work for this: in my tests taps were ignored and screenshots were black.
 - **The phone must already be unlocked, and it stays unlocked and awake while the screen is dark.** A locked phone shows only its lock screen to any tool. Do not leave a dark, unlocked phone unattended.
 - The screen is restored when you turn it off, when the server or CLI stops, when the MCP client disconnects, and on Ctrl-C or kill. As a backstop it also runs `cmd display power-reset 0`.
-- Checked on one phone only. Behavior elsewhere is untested.
 
-## Limits (measured on a Samsung SM-S916B, Android 16, over USB)
+## Limits (measured over USB)
 
 - Each `adb shell input` call costs about 70 ms, and a screenshot about 280 ms. Fine for test steps, not for fast continuous drags.
 - `adb input` has no multi-touch, so pinch and rotate are not available yet. The tools sit behind a backend interface so a scrcpy or accessibility backend can be added later.
